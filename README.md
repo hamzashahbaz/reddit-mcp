@@ -1,6 +1,6 @@
 # reddit-mcp
 
-A read-only Reddit MCP server for Claude Code and other MCP-compatible clients. Search posts, browse subreddits, read comments, view user profiles, and check trending content -- all through the Model Context Protocol.
+A read-only MCP server built for Claude that connects to the **Reddit Data API** (`oauth.reddit.com`). Search posts, browse subreddits, read comments, view user profiles, and check trending content — all through the Model Context Protocol.
 
 ### Quick Install (Claude Code)
 
@@ -109,7 +109,12 @@ Replace `/path/to/reddit-mcp` with the actual path to your cloned directory.
 
 ## How it works
 
-The server authenticates with Reddit's OAuth2 API using the password grant flow, then exposes read-only endpoints as MCP tools over stdio transport. Tokens are cached and automatically refreshed before expiry.
+- Uses the **Reddit Data API** (REST) at `https://oauth.reddit.com`
+- Authenticates via OAuth 2.0 password grant (script app)
+- All operations are read-only GET requests
+- Tokens cached in memory, auto-refreshed before expiry
+- Respects Reddit rate limits (100 req/min authenticated)
+- Built for **Claude Code** and **Claude Desktop** via the Model Context Protocol (MCP)
 
 ## License
 

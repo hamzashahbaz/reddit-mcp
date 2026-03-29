@@ -1,6 +1,6 @@
 {
   "name": "@hamzashahbaz/reddit-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Read-only Reddit MCP server for Claude Code and other MCP clients",
   "type": "module",
   "license": "MIT",
