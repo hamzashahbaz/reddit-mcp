@@ -30,7 +30,23 @@ claude mcp add reddit -e REDDIT_CLIENT_ID=your_id -e REDDIT_CLIENT_SECRET=your_s
 
 ## Setup
 
-### 1. Create a Reddit script app
+### 1. Request Reddit API access
+
+Reddit requires API access approval before you can create apps.
+
+1. Go to [Reddit Help — Submit a request](https://support.reddithelp.com/hc/en-us/requests/new?ticket_form_id=14868593862164)
+2. Select **API Access Request**
+3. Fill in the form:
+   - **Benefit/purpose**: Read-only content browsing tool that helps users discover and read Reddit content through AI assistants — no posting, commenting, or voting.
+   - **Detailed description**: reddit-mcp is an open-source MCP (Model Context Protocol) server that provides read-only access to Reddit's public content. It allows AI assistants to search posts, browse subreddits, read comments, and view user profiles. All operations are read-only GET requests. Source code: https://github.com/hamzashahbaz/reddit-mcp
+   - **Devvit question**: This tool is an external read-only client that integrates Reddit content into AI workflows — a use case outside Devvit's scope.
+   - **Source code link**: `https://github.com/hamzashahbaz/reddit-mcp`
+   - **Subreddits**: General-purpose — works with any public subreddit
+4. Submit and wait for approval (typically a few days)
+
+### 2. Create a Reddit script app
+
+Once approved:
 
 1. Go to [reddit.com/prefs/apps](https://www.reddit.com/prefs/apps)
 2. Click **"create another app..."**
@@ -40,7 +56,7 @@ claude mcp add reddit -e REDDIT_CLIENT_ID=your_id -e REDDIT_CLIENT_SECRET=your_s
    - **redirect uri**: `http://localhost:8080` (not used, but required)
 4. Note your **client ID** (under the app name) and **client secret**
 
-### 2. Clone and build
+### 3. Clone and build
 
 ```bash
 git clone https://github.com/hamzashahbaz/reddit-mcp.git
