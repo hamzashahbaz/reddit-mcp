@@ -2,6 +2,18 @@
 
 A read-only Reddit MCP server for Claude Code and other MCP-compatible clients. Search posts, browse subreddits, read comments, view user profiles, and check trending content -- all through the Model Context Protocol.
 
+### Quick Install (Claude Code)
+
+```bash
+npx -y @hamzashahbaz/reddit-mcp
+```
+
+Or add it to Claude Code with environment variables:
+
+```bash
+claude mcp add reddit -e REDDIT_CLIENT_ID=your_id -e REDDIT_CLIENT_SECRET=your_secret -e REDDIT_USERNAME=your_username -e REDDIT_PASSWORD=your_password -- npx -y @hamzashahbaz/reddit-mcp
+```
+
 ## Features
 
 - **Search Reddit** -- query posts across all of Reddit or within a specific subreddit

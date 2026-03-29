@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Reddit Content MCP Server — read-only Reddit access via OAuth2.
  * Stdio transport for Claude Code integration.

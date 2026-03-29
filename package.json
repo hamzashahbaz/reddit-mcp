@@ -1,5 +1,5 @@
 {
-  "name": "reddit-mcp",
+  "name": "@hamzashahbaz/reddit-mcp",
   "version": "0.1.0",
   "description": "Read-only Reddit MCP server for Claude Code and other MCP clients",
   "type": "module",
@@ -15,6 +15,14 @@
     "claude",
     "ai",
     "model-context-protocol"
+  ],
+  "bin": {
+    "reddit-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc",
